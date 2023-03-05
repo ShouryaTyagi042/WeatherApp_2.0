@@ -7,8 +7,21 @@ import {
 } from "react-leaflet";
 import { useState } from "react";
 import "../css/Map.css";
+import axios from "axios";
 
 const Map = () => {
+  function FetchCityName(lat, lng) {
+    console.log(lat, lng);
+    const fetchData = () => {
+      return axios
+        .get(
+          `https://www.mapquestapi.com/geocoding/v1/reverse?key=qcA5j75eWPr0XWheixrO8T8AK5m0XgM0&location=29.9416585,76.8172725&includeRoadMetadata=true&includeNearestIntersection=true`
+        )
+        .then((response) => console.log(response));
+    };
+    fetchData();
+  }
+
   function LocationMarker() {
     const [position, setPosition] = useState(null);
     const map = useMapEvents({
@@ -18,13 +31,13 @@ const Map = () => {
       locationfound(e) {
         setPosition(e.latlng);
         map.flyTo(e.latlng, map.getZoom());
-        console.log(e.latlng);
+        FetchCityName(e.latlng.lat.toString(), e.latlng.lng.toString());
       },
     });
 
     return position === null ? null : (
       <Marker position={position}>
-        <Popup>You are here</Popup>
+        <Popup>You are here </Popup>
       </Marker>
     );
   }
