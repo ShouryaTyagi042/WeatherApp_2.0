@@ -15,7 +15,7 @@ const Map = () => {
     const fetchData = () => {
       return axios
         .get(
-          `https://www.mapquestapi.com/geocoding/v1/reverse?key=qcA5j75eWPr0XWheixrO8T8AK5m0XgM0&location=29.9416585,76.8172725&includeRoadMetadata=true&includeNearestIntersection=true`
+          `https://www.mapquestapi.com/geocoding/v1/reverse?key=qcA5j75eWPr0XWheixrO8T8AK5m0XgM0&location=${lat},${lng}&includeRoadMetadata=true&includeNearestIntersection=true`
         )
         .then((response) =>
           console.log(response.data.results[0].locations[0].adminArea5)
