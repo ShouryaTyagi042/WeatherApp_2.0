@@ -5,7 +5,6 @@ import {
   Popup,
   useMapEvents,
 } from "react-leaflet";
-import { useState } from "react";
 import "../css/Map.css";
 import axios from "axios";
 
@@ -23,22 +22,22 @@ const Map = () => {
     };
     fetchData();
   }
-
   function LocationMarker() {
-    const [position, setPosition] = useState(null);
     const map = useMapEvents({
       click() {
         map.locate();
       },
       locationfound(e) {
-        setPosition(e.latlng);
         map.flyTo(e.latlng, map.getZoom());
         FetchCityName(e.latlng.lat.toString(), e.latlng.lng.toString());
+        DisplayMarker(e.latlng);
       },
     });
+  }
+  function DisplayMarker(position, CityName) {
     return position === null ? null : (
       <Marker position={position}>
-        <Popup>You are here </Popup>
+        <Popup> You are in </Popup>
       </Marker>
     );
   }
