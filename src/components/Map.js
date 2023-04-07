@@ -7,8 +7,11 @@ import {
 } from "react-leaflet";
 import "../css/Map.css";
 import axios from "axios";
+import { useState } from "react";
 
 const Map = () => {
+  const [cityname, setcityname] = useState("");
+  const [temp, settemp] = useState(null);
   function FetchCityName(lat, lng) {
     console.log(lat, lng);
     const fetchData = () => {
@@ -16,28 +19,44 @@ const Map = () => {
         .get(
           `https://www.mapquestapi.com/geocoding/v1/reverse?key=qcA5j75eWPr0XWheixrO8T8AK5m0XgM0&location=${lat},${lng}&includeRoadMetadata=true&includeNearestIntersection=true`
         )
-        .then((response) =>
-          console.log(response.data.results[0].locations[0].adminArea5)
+        .then(
+          (response) =>
+            setcityname(response.data.results[0].locations[0].adminArea5)
+          // setcityname(response.data.results[0].locations[0].adminArea5)
         );
     };
     fetchData();
   }
+  function FetchCityTemp(CityName) {
+    console.log(CityName);
+    const fetchData = () => {
+      return axios
+        .get(
+          `http://api.openweathermap.org/data/2.5/weather?q=faridabad&units=imperial&appid=2b48636567a78dabde0496902b1d91bb`
+        )
+        .then((response) => settemp(response.data.main.temp));
+    };
+    fetchData();
+  }
   function LocationMarker() {
+    const [position, setPosition] = useState(null);
     const map = useMapEvents({
       click() {
         map.locate();
       },
       locationfound(e) {
+        setPosition(e.latlng);
         map.flyTo(e.latlng, map.getZoom());
-        FetchCityName(e.latlng.lat.toString(), e.latlng.lng.toString());
-        DisplayMarker(e.latlng);
+        FetchCityName(e.latlng.lat, e.latlng.lng);
+        FetchCityTemp(cityname);
       },
     });
-  }
-  function DisplayMarker(position, CityName) {
+
     return position === null ? null : (
       <Marker position={position}>
-        <Popup> You are in </Popup>
+        <Popup>
+          You are here in {cityname}, Temp is {temp}°F.
+        </Popup>
       </Marker>
     );
   }
