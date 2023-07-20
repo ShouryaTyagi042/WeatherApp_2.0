@@ -1,70 +1,32 @@
-[debug] [2023-07-20T09:38:07.748Z] ----------------------------------------------------------------------
-[debug] [2023-07-20T09:38:07.750Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
-[debug] [2023-07-20T09:38:07.750Z] CLI Version:   12.4.5
-[debug] [2023-07-20T09:38:07.750Z] Platform:      darwin
-[debug] [2023-07-20T09:38:07.750Z] Node Version:  v20.4.0
-[debug] [2023-07-20T09:38:07.750Z] Time:          Thu Jul 20 2023 15:08:07 GMT+0530 (India Standard Time)
-[debug] [2023-07-20T09:38:07.750Z] ----------------------------------------------------------------------
+[debug] [2023-07-20T09:53:22.205Z] ----------------------------------------------------------------------
+[debug] [2023-07-20T09:53:22.210Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve --only hosting
+[debug] [2023-07-20T09:53:22.210Z] CLI Version:   12.4.5
+[debug] [2023-07-20T09:53:22.211Z] Platform:      darwin
+[debug] [2023-07-20T09:53:22.211Z] Node Version:  v20.4.0
+[debug] [2023-07-20T09:53:22.211Z] Time:          Thu Jul 20 2023 15:23:22 GMT+0530 (India Standard Time)
+[debug] [2023-07-20T09:53:22.211Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2023-07-20T09:38:07.816Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2023-07-20T09:38:07.817Z] > authorizing via signed-in user (shourya.bond007@gmail.com)
-[debug] [2023-07-20T09:38:07.817Z] [iam] checking project weather-app-de36c for permissions ["firebase.projects.get"]
-[debug] [2023-07-20T09:38:07.817Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/weather-app-de36c:testIamPermissions [none]
-[debug] [2023-07-20T09:38:07.817Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/weather-app-de36c:testIamPermissions x-goog-quota-user=projects/weather-app-de36c
-[debug] [2023-07-20T09:38:07.818Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/weather-app-de36c:testIamPermissions {"permissions":["firebase.projects.get"]}
-[debug] [2023-07-20T09:38:09.351Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/weather-app-de36c:testIamPermissions 200
-[debug] [2023-07-20T09:38:09.351Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/weather-app-de36c:testIamPermissions {"permissions":["firebase.projects.get"]}
-[debug] [2023-07-20T09:38:09.352Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/weather-app-de36c [none]
-[debug] [2023-07-20T09:38:09.968Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/weather-app-de36c 200
-[debug] [2023-07-20T09:38:09.968Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/weather-app-de36c {"projectId":"weather-app-de36c","projectNumber":"328137895952","displayName":"Weather App","name":"projects/weather-app-de36c","resources":{"hostingSite":"weather-app-de36c"},"state":"ACTIVE","etag":"1_2f3fe597-9d03-4dd1-9dd5-2756fcfd9a5c"}
-[info] 
-[info] === Serving from '/Users/shouryatyagi/Documents/Projects/WeatherAppAdvanced/weather-app'...
-[info] 
-[debug] [2023-07-20T09:38:09.974Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/weather-app-de36c/sites 
-[debug] [2023-07-20T09:38:11.083Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/weather-app-de36c/sites 200
-[debug] [2023-07-20T09:38:11.084Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/weather-app-de36c/sites {"sites":[{"name":"projects/weather-app-de36c/sites/weather-app-de36c","defaultUrl":"https://weather-app-de36c.web.app","type":"DEFAULT_SITE"}]}
-[debug] [2023-07-20T09:38:11.084Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/weather-app-de36c/webApps/-/config [none]
-[debug] [2023-07-20T09:38:12.018Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/weather-app-de36c/webApps/-/config 200
-[debug] [2023-07-20T09:38:12.018Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/weather-app-de36c/webApps/-/config {"projectId":"weather-app-de36c","storageBucket":"weather-app-de36c.appspot.com","apiKey":"AIzaSyAHYBUGNuOYShQNHD74Xg3Yww_TP__cq1M","authDomain":"weather-app-de36c.firebaseapp.com","messagingSenderId":"328137895952"}
-[debug] [2023-07-20T09:38:12.027Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/weather-app-de36c [none]
-[debug] [2023-07-20T09:38:12.480Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/weather-app-de36c 200
-[debug] [2023-07-20T09:38:12.481Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/weather-app-de36c {"projectId":"weather-app-de36c","projectNumber":"328137895952","displayName":"Weather App","name":"projects/weather-app-de36c","resources":{"hostingSite":"weather-app-de36c"},"state":"ACTIVE","etag":"1_2f3fe597-9d03-4dd1-9dd5-2756fcfd9a5c"}
-[debug] [2023-07-20T09:38:12.775Z] Error: getaddrinfo ENOTFOUND localhost
-    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:107:26)
-[error] 
-[error] Error: An unexpected error has occurred.
-[debug] [2023-07-20T09:42:57.302Z] ----------------------------------------------------------------------
-[debug] [2023-07-20T09:42:57.306Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
-[debug] [2023-07-20T09:42:57.306Z] CLI Version:   12.4.5
-[debug] [2023-07-20T09:42:57.306Z] Platform:      darwin
-[debug] [2023-07-20T09:42:57.306Z] Node Version:  v20.4.0
-[debug] [2023-07-20T09:42:57.306Z] Time:          Thu Jul 20 2023 15:12:57 GMT+0530 (India Standard Time)
-[debug] [2023-07-20T09:42:57.306Z] ----------------------------------------------------------------------
-[debug] 
-[debug] [2023-07-20T09:42:57.368Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2023-07-20T09:42:57.368Z] > authorizing via signed-in user (shourya.bond007@gmail.com)
-[debug] [2023-07-20T09:42:57.368Z] [iam] checking project weather-app-de36c for permissions ["firebase.projects.get"]
-[debug] [2023-07-20T09:42:57.369Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/weather-app-de36c:testIamPermissions [none]
-[debug] [2023-07-20T09:42:57.369Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/weather-app-de36c:testIamPermissions x-goog-quota-user=projects/weather-app-de36c
-[debug] [2023-07-20T09:42:57.369Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/weather-app-de36c:testIamPermissions {"permissions":["firebase.projects.get"]}
-[debug] [2023-07-20T09:42:59.119Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/weather-app-de36c:testIamPermissions 200
-[debug] [2023-07-20T09:42:59.120Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/weather-app-de36c:testIamPermissions {"permissions":["firebase.projects.get"]}
-[debug] [2023-07-20T09:42:59.121Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/weather-app-de36c [none]
-[debug] [2023-07-20T09:42:59.588Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/weather-app-de36c 200
-[debug] [2023-07-20T09:42:59.588Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/weather-app-de36c {"projectId":"weather-app-de36c","projectNumber":"328137895952","displayName":"Weather App","name":"projects/weather-app-de36c","resources":{"hostingSite":"weather-app-de36c"},"state":"ACTIVE","etag":"1_2f3fe597-9d03-4dd1-9dd5-2756fcfd9a5c"}
-[info] 
-[info] === Serving from '/Users/shouryatyagi/Documents/Projects/WeatherAppAdvanced/weather-app'...
-[info] 
-[debug] [2023-07-20T09:42:59.595Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/weather-app-de36c/sites 
-[debug] [2023-07-20T09:43:00.739Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/weather-app-de36c/sites 200
-[debug] [2023-07-20T09:43:00.740Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/weather-app-de36c/sites {"sites":[{"name":"projects/weather-app-de36c/sites/weather-app-de36c","defaultUrl":"https://weather-app-de36c.web.app","type":"DEFAULT_SITE"}]}
-[debug] [2023-07-20T09:43:00.740Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/weather-app-de36c/webApps/-/config [none]
-[debug] [2023-07-20T09:43:01.746Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/weather-app-de36c/webApps/-/config 200
-[debug] [2023-07-20T09:43:01.746Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/weather-app-de36c/webApps/-/config {"projectId":"weather-app-de36c","storageBucket":"weather-app-de36c.appspot.com","apiKey":"AIzaSyAHYBUGNuOYShQNHD74Xg3Yww_TP__cq1M","authDomain":"weather-app-de36c.firebaseapp.com","messagingSenderId":"328137895952"}
-[debug] [2023-07-20T09:43:01.756Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/weather-app-de36c [none]
-[debug] [2023-07-20T09:43:02.861Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/weather-app-de36c 200
-[debug] [2023-07-20T09:43:02.861Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/weather-app-de36c {"projectId":"weather-app-de36c","projectNumber":"328137895952","displayName":"Weather App","name":"projects/weather-app-de36c","resources":{"hostingSite":"weather-app-de36c"},"state":"ACTIVE","etag":"1_2f3fe597-9d03-4dd1-9dd5-2756fcfd9a5c"}
-[debug] [2023-07-20T09:43:03.167Z] Error: getaddrinfo ENOTFOUND localhost
+[debug] [2023-07-20T09:53:22.281Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-07-20T09:53:22.281Z] > authorizing via signed-in user (shourya.bond007@gmail.com)
+[debug] [2023-07-20T09:53:22.281Z] [iam] checking project weather-app-de36c for permissions ["firebase.projects.get"]
+[debug] [2023-07-20T09:53:22.282Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/weather-app-de36c:testIamPermissions [none]
+[debug] [2023-07-20T09:53:22.282Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/weather-app-de36c:testIamPermissions x-goog-quota-user=projects/weather-app-de36c
+[debug] [2023-07-20T09:53:22.282Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/weather-app-de36c:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-07-20T09:53:24.049Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/weather-app-de36c:testIamPermissions 200
+[debug] [2023-07-20T09:53:24.049Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/weather-app-de36c:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-07-20T09:53:24.050Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/weather-app-de36c [none]
+[debug] [2023-07-20T09:53:24.665Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/weather-app-de36c 200
+[debug] [2023-07-20T09:53:24.665Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/weather-app-de36c {"projectId":"weather-app-de36c","projectNumber":"328137895952","displayName":"Weather App","name":"projects/weather-app-de36c","resources":{"hostingSite":"weather-app-de36c"},"state":"ACTIVE","etag":"1_55798ba9-43e5-4f5f-bc9b-0d3f9591407d"}
+[debug] [2023-07-20T09:53:24.669Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/weather-app-de36c/sites 
+[debug] [2023-07-20T09:53:25.775Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/weather-app-de36c/sites 200
+[debug] [2023-07-20T09:53:25.775Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/weather-app-de36c/sites {"sites":[{"name":"projects/weather-app-de36c/sites/weather-app-de36c","defaultUrl":"https://weather-app-de36c.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2023-07-20T09:53:25.776Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/weather-app-de36c/webApps/-/config [none]
+[debug] [2023-07-20T09:53:26.475Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/weather-app-de36c/webApps/-/config 200
+[debug] [2023-07-20T09:53:26.475Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/weather-app-de36c/webApps/-/config {"projectId":"weather-app-de36c","storageBucket":"weather-app-de36c.appspot.com","apiKey":"AIzaSyAHYBUGNuOYShQNHD74Xg3Yww_TP__cq1M","authDomain":"weather-app-de36c.firebaseapp.com","messagingSenderId":"328137895952"}
+[debug] [2023-07-20T09:53:26.486Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/weather-app-de36c [none]
+[debug] [2023-07-20T09:53:26.935Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/weather-app-de36c 200
+[debug] [2023-07-20T09:53:26.936Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/weather-app-de36c {"projectId":"weather-app-de36c","projectNumber":"328137895952","displayName":"Weather App","name":"projects/weather-app-de36c","resources":{"hostingSite":"weather-app-de36c"},"state":"ACTIVE","etag":"1_55798ba9-43e5-4f5f-bc9b-0d3f9591407d"}
+[debug] [2023-07-20T09:53:27.226Z] Error: getaddrinfo ENOTFOUND localhost
     at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:107:26)
 [error] 
 [error] Error: An unexpected error has occurred.
