@@ -29,12 +29,11 @@ const Map = () => {
   }
   function FetchCityTemp(CityName) {
     console.log(CityName);
-    const fetchData = () => {
-      return axios
-        .get(
-          `http://api.openweathermap.org/data/2.5/weather?q=faridabad&units=imperial&appid=2b48636567a78dabde0496902b1d91bb`
-        )
-        .then((response) => settemp(response.data.main.temp));
+    const fetchData = async () => {
+      const response = await axios.get(
+        `http://api.openweathermap.org/data/2.5/weather?q=faridabad&units=imperial&appid=2b48636567a78dabde0496902b1d91bb`
+      );
+      return settemp(response.data.main.temp);
     };
     fetchData();
   }
